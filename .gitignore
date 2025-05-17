@@ -27,3 +27,6 @@ yarn-error.log*
 
 # Environment file
 .env
+
+# Toml backup file
+.toml.bak
