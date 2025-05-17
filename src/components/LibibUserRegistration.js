@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
 
 // Constants - using environment variables
-const API_ENDPOINT = 'https://api.libib.com/v1/patrons';
+// const API_ENDPOINT = 'https://api.libib.com/v1/patrons';
 // We'll access these from environment variables
 // USER_ID and API_KEY will be accessed through the backend now
 
@@ -112,7 +112,7 @@ export default function LibibUserRegistration() {
         throw new Error(errorData.message || 'Registration failed');
       }
       
-      const data = await response.json();
+      // const data = await response.json();
       setRegistrationStatus('success');
       setRegisteredData(formData);
       // Email is now sent by the backend
