@@ -1,0 +1,150 @@
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #1e50c9 30%, #1e50c9 70%, #ffffff 70%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #ffffff;
+  transform-origin: right top;
+  transform: skewY(-5deg);
+  z-index: 0;
+}
+
+.registration-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #ffffff;
+  transform-origin: left bottom;
+  transform: skewY(-5deg);
+  z-index: 0;
+}
+
+.registration-form-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.form-instruction {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.required {
+  color: #1e50c9;
+}
+
+input {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1e50c9;
+  box-shadow: 0 0 0 2px rgba(30, 80, 201, 0.1);
+}
+
+.field-error {
+  color: #e53935;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.register-button {
+  background-color: #1e50c9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.register-button:hover {
+  background-color: #1642ae;
+}
+
+.register-button:disabled {
+  background-color: #b3c1e8;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.success-message h2 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+
+@media (max-width: 768px) {
+  .registration-form-wrapper {
+    padding: 30px 20px;
+  }
+}

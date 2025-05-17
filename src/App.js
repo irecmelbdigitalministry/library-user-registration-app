@@ -1,10 +1,10 @@
-import LibibUserRegistration from './components/LibibUserRegistration';
+import RegistrationForm from './components/RegistrationForm';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <LibibUserRegistration />
+      <RegistrationForm />
     </div>
   );
 }
