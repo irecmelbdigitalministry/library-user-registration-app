@@ -5,15 +5,6 @@
 const fetch = require('node-fetch');
 const nodemailer = require('nodemailer');
 
-// Load environment variables
-// Create a .env file in your project root with these variables:
-// LIBIB_USER_ID=c91407d2da6201978b2381b8054891ba0aaf2dae
-// LIBIB_API_KEY=926f378d4bd94f6ff055d7933dfab2116a15f310324bacc2b3d5d3e0df66d7ff
-// EMAIL_HOST=your-smtp-host
-// EMAIL_PORT=587
-// EMAIL_USER=your-email-username
-// EMAIL_PASSWORD=your-email-password
-// EMAIL_FROM=no-reply@yourdomain.com
 require('dotenv').config();
 
 // API credentials from environment variables
