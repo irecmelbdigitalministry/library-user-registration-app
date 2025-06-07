@@ -10,7 +10,7 @@ require('dotenv').config();
 // API credentials from environment variables
 const USER_ID = process.env.LIBIB_USER_ID;
 const API_KEY = process.env.LIBIB_API_KEY;
-const API_ENDPOINT = 'https://api.libib.com/v1/patrons';
+const API_ENDPOINT = 'https://api.libib.com/patrons';
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -53,8 +53,8 @@ exports.handler = async function (event, context) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-User-Id': USER_ID,
-        'X-Api-Key': API_KEY,
+        'x-api-key': API_KEY,
+        'x-api-user': USER_ID
       },
       body: JSON.stringify(userData),
     });
